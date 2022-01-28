@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link  href="{{ url_for('static',filename='style.css') }}" rel="stylesheet" />
+    <title>Mintpages</title>
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark py-3 fixed-top">
+      <div class="container">
+        <a href="#" class="navbar-brand">Mintpages</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--This is the top navigation bar buttons-->
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li  class="nav-item">
+              <a href="#news" class="nav-link">News</a>
+            </li>
+            <li class="nav-item">
+              <a href="#faq" class="nav-link">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">About us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Showcase -->
+    <section
+      class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
+    >
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h1>Get the <span class="text-success"> Freshest </span>news</h1>
+            <h3>and never miss a thing..</h3>
+            <p class="lead my-4">
+              We focus on giving you the latest news, summarised to let you
+              stay up to-date with events from around the globe, within just a few minutes a day...
+              This website summarises news to save you time and allows you to never miss a thing again
+            </p>
+            <p>Currently, this website may only be used for educational purposes only.</p>
+            <button
+              class="btn btn-success btn-lg"
+              id="newsbutton"
+            >
+              Search news
+            </button>
+            <!-- button test-->
+            <script>
+              const btnScrollToTop = document.querySelector("#newsbutton");
+              btnScrollToTop.addEventListener("click", function() {
+                window.scrollTo(0,850);
+              });
+            </script>
+            <!-- button test-->
+          </div>
+          <img
+            class="img-fluid w-100 d-none d-sm-block"
+            src="{{ url_for('static',filename='images/earth.png') }}"
+            alt=""
+          />
+        </div>
+      </div>
+      <!-- the thing below this just adds a speace between the black and blue (break)-->
+
+
+    </section>
+
+    <!-- Newsletter -->
+  
+    <section class="bg-success text-light p-5">
+      <div class="container">
+        <div class="d-md-flex justify-content-between align-items-center">
+          <h3 class="mb-3 mb-md-0">Sign Up For Our Newsletter (launch soon)</h3>
+
+          <div class="input-group news-input">
+            <input type="text" class="form-control" placeholder="Enter Email" />
+            <button class="btn btn-dark btn-lg" type="button">Submit</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Search engine/input box-->
+    <br>
+    <section id="search-bar">
+      <div class="container">
+        <div>
+          <br>
+          <p style="text-align:center;"><img src="{{ url_for('static',filename='images/logo.png' )}}"><p>
+          <div class="row height d-flex justify-content-center align-items-center">
+            
+            <div class="input-group search-input w-50 p-3">
+              <input type="text" class="form-control" placeholder="Search" />
+              <button class="btn btn-success btn-lg" type="button"><i class="bi bi-search"></i></button>
+            </div><span style="text-indent: 26%;" class="text mb-4"> 12 fresh articles</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Boxes -->
+    <section class="p-5">
+      <div class="container">
+        <div class="row text-center g-4">
+          <div class="col-md">
+          <!---FIRST COLOUMN--->
+          <!-- first row in first coloumn -->
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-newspaper"></i>
+                </div>
+                <h3 class="card-title mb-3">News1</h3>
+                <p class="card-text">
+                  Content content content content
+                  Content content content content
+                </p>
+                <!-- Make the href the link to article-->
+                <a href="#" class="btn btn-success">Link to original article</a>
+              </div>
+            </div>
+            <!-- second row in first coloumn-->
+            <br>
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-newspaper"></i>
+                </div>
+                <h3 class="card-title mb-3">News4</h3>
+                <p class="card-text">
+                  Content content content content
+                  Content content content content
+                </p>
+                <a href="#" class="btn btn-success">Link to original article</a>
+              </div>
+            </div>
+            <!-- third row in first coloumn-->
+            <br>
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-newspaper"></i>
+                </div>
+                <h3 class="card-title mb-3">News7</h3>
+                <p class="card-text">
+                  Content content content content
+                  Content content content content
+                </p>
+                <a href="#" class="btn btn-success">Link to original article</a>
+              </div>
+            </div>
+            <!-- fourth row in first coloumn-->
+            <br>
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-newspaper"></i>
+                </div>
+                <h3 class="card-title mb-3">News10</h3>
+                <p class="card-text">
+                  Content content content content
+                  Content content content content
+                </p>
+                <a href="#" class="btn btn-success">Link to original article</a>
+              </div>
+            </div>            
+          </div>
+          <div class="col-md">
+          <!---SECOND COLOUMN--->
+            <!-- first row in second coloumn-->
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-newspaper"></i>
+                </div>
+                <h3 class="card-title mb-3">News2</h3>
+                <p class="card-text">
+                  Content content content content
+                  Content content content content
+                </p>
+                <a href="#" class="btn btn-success">Link to original article</a>
+              </div>
+            </div>
+            <!-- second row in second coloumn-->
+            <br>
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-newspaper"></i>
+                </div>
+                <h3 class="card-title mb-3">News5</h3>
+                <p class="card-text">
+                  Content content content content
+                  Content content content content
+                </p>
+                <a href="#" class="btn btn-success">Link to original article</a>
+              </div>
+            </div>
+            <!-- third row in second coloumn-->
+            <br>
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-newspaper"></i>
+                </div>
+                <h3 class="card-title mb-3">News8</h3>
+                <p class="card-text">
+                  Content content content content
+                  Content content content content
+                </p>
+                <a href="#" class="btn btn-success">Link to original article</a>
+              </div>
+            </div>
+            <!-- Fourth row in second coloumn-->
+            <br>
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-newspaper"></i>
+                </div>
+                <h3 class="card-title mb-3">News11</h3>
+                <p class="card-text">
+                  Content content content content
+                  Content content content content
+                </p>
+                <a href="#" class="btn btn-success">Link to original article</a>
+              </div>
+            </div>            
+          </div>
+          <!-- Third coloumn total -->
+          <div class="col-md">
+          <!-- THIRD COLOUMN-->
+            <!-- first row in third coloumn -->            
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-newspaper"></i>
+                </div>
+                <h3 class="card-title mb-3">News3</h3>
+                <p class="card-text">
+                  Content content content content
+                  Content content content content
+                </p>
+                <a href="#" class="btn btn-success">Link to original article</a>
+              </div>
+            </div>
+            <!-- second row in third coloumn -->
+            <br>
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-newspaper"></i>
+                </div>
+                <h3 class="card-title mb-3">News6</h3>
+                <p class="card-text">
+                  Content content content content
+                  Content content content content
+                </p>
+                <a href="#" class="btn btn-success">Link to original article</a>
+              </div>
+            </div>
+            <br>
+           <!-- third row in third coloumn -->
+           <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-newspaper"></i>
+                </div>
+                <h3 class="card-title mb-3">News9</h3>
+                <p class="card-text">
+                  Content content content content
+                  Content content content content
+                </p>
+                <a href="#" class="btn btn-success">Link to original article</a>
+              </div>
+            </div>   
+            <br>
+            <!-- Fourth row in third coloumn -->
+           <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-newspaper"></i>
+                </div>
+                <h3 class="card-title mb-3">News12</h3>
+                <p class="card-text">
+                  Content content content content
+                  Content content content content
+                </p>
+                <a href="https://www.google.com/" class="btn btn-success">Link to original article</a>
+              </div>
+            </div>
+            
+        </div>
+        
+      </div>
+      
+    </section>
+    
+
+
+    <!-- Question Accordion -->
+    <section id="questions" class="p-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        <div class="accordion accordion-flush" id="questions">
+          <!-- Item 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-one"
+              >
+                What is Mintpages?
+              </button>
+            </h2>
+            <div
+              id="question-one"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                  Mint pages is a news summary website that summarises news for you.
+                  It allows you to stay up-to date with all the latest headlines from
+                  local news to global economics to the latest in sports,technology, health
+                  and science.
+              </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-two"
+              >
+                How do i start?
+              </button>
+            </h2>
+            <div
+              id="question-two"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Simply scroll up, and youll see a large search box. Enter your
+                preffered news topic and youll get 12 articles on the latest
+                news about your topic.
+              </div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-three"
+              >
+                Why is this website called mintpages?
+              </button>
+            </h2>
+            <div
+              id="question-three"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                It was thought of mint as symbolic to fresh, and 
+                we offer the latest/fresh news so mintpages turned
+                out to be a good name.
+              </div>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-four"
+              >
+                What is the newsletter/When will it be launched?
+              </button>
+            </h2>
+            <div
+              id="question-four"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                The newsletter is aimed at giving you the daily minty news
+                into your email inbox, so you can stay up to date with the 
+                latest articles
+              </div>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-five"
+              >
+                How did this start?
+              </button>
+            </h2>
+            <div
+              id="question-five"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                I do economics and we were told to stay up-to date
+                with the latest news and it was hard to stay up-to
+                date every single day with the latest headlines and be
+                familiar with all the events. So i thought what if you
+                can get summarised news sent to your inbox, so it would 
+                take less than 5 minutes a day just reading summarised news.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Footer -->
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+      <div class="container">
+        <p class="lead">Mintpages 2021
+        </p>
+
+        <a href="#" class="position-absolute bottom-0 end-0 p-5">
+          <i class="bi bi-arrow-up-circle h1"></i>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
